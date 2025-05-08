@@ -41,3 +41,16 @@ void Etudiant::setMoyenne(int nouvelleMoyenne){
 int Etudiant::getMoyenne(void){
     return (this->moyenne);
 }
+
+//Définitin de la méthode setMatricule de la classe EtudiantAdmin qui doit commencer par un 5
+void EtudiantAdmin :: setMatricule(int nouveauMatricule){
+    //Le numero de matricule doit necessairement avoir 7 chiffres
+    if ((nouveauMatricule >= 5000000) && (nouveauMatricule <= 5999999)) {
+        this->numeroMatricule = nouveauMatricule;    
+    }
+    else{
+        this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+
+//l

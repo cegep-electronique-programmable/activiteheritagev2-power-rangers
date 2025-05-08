@@ -15,14 +15,27 @@
 
 //Déclaration de la classe Etudiant
 class Etudiant {
-    int numeroMatricule;
-    int moyenne;
-	
-public:
-    void setMatricule(int);
-    int getMatricule();
-    void setMoyenne(int);
-    int getMoyenne();
-};
+    protected:
+        int numeroMatricule;
+        int moyenne;
+        
+    public:
+        void setMatricule(int);
+        int getMatricule();
+        void setMoyenne(int);
+        int getMoyenne();
+    };
+
+//Déclaration de la classe EtudiantAdmin
+class EtudiantAdmin : public Etudiant { 
+    protected:
+      float coutSession;
+  
+    public:
+      void setMatricule(int);
+      void setCoutSession(float);
+      float getCoutSession(void);
+      
+    };
 
 #endif //ETUDIANT_H
