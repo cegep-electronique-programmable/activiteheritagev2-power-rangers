@@ -10,7 +10,9 @@
  * 
  * Date de création
  *      7 mai 2025
- *  
+ * 
+ * Modification faites par
+ *      Adriana Giselle Bardales Lazo
  */
 
 #include <Arduino.h>
