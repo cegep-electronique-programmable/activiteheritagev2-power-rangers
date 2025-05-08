@@ -23,8 +23,6 @@ void Etudiant::setMatricule(int nouveauMatricule){
     }
 }
 
-
-
 int Etudiant::getMatricule(void){
     return (this->numeroMatricule);
 }
@@ -40,4 +38,21 @@ void Etudiant::setMoyenne(int nouvelleMoyenne){
 
 int Etudiant::getMoyenne(void){
     return (this->moyenne);
+}
+
+void EtudiantArtLettre::setMatricule(int nouveauMatricule) {
+    if ((nouveauMatricule >= 4000000) && (nouveauMatricule <= 9999999)){
+        this->numeroMatricule = nouveauMatricule;    
+    }
+    else{
+        this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+
+void EtudiantArtLettre::setNbrLivresLus(int nbrLivresLusTotal) {
+    this->nbrLivresLus = nbrLivresLusTotal;
+}
+
+int EtudiantArtLettre::getNbrLivresLus() {
+    return nbrLivresLus;
 }

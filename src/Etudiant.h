@@ -15,6 +15,7 @@
 
 //Déclaration de la classe Etudiant
 class Etudiant {
+protected:
     int numeroMatricule;
     int moyenne;
 	
@@ -26,3 +27,17 @@ public:
 };
 
 #endif //ETUDIANT_H
+
+#ifndef ETUDIANT_ART_LETTRE_H
+#define ETUDIANT_ART_LETTRE_H
+
+class EtudiantArtLettre : Etudiant {
+private:
+    int nbrLivresLus;
+public:
+    void setMatricule(int);
+    void setNbrLivresLus(int);
+    int getNbrLivresLus();
+};
+
+#endif //ETUDIANT_ART_LETTRE_H
