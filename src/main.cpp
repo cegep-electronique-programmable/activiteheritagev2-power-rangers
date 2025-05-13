@@ -21,7 +21,7 @@
 // Déclaration des fonctions
 //********************************************************************************
 void testEtudiant(void);
-
+void testEtudiantAdmin(void);
 
 //********************************************************************************
 // Déclartions des variables globales
@@ -39,6 +39,7 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);   // DEL embarqué configuré en sortie
 
   testEtudiant();  
+    testEtudiantAdmin(); 
 }
 
 
@@ -48,8 +49,8 @@ void setup() {
 void loop() {
 
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));   //Changer état de la DEL
-
-  delay(1000);                                            //Attendre une seconde
+  delay(1000);    
+                                       //Attendre une seconde
 }
 
 
@@ -68,5 +69,26 @@ void testEtudiant(void) {
   numeroMatriculeTmp = owen.getMatricule();
   moyenneTmp = owen.getMoyenne(); 
   printf("Owen, matricule # %d, moyenne %d\n", numeroMatriculeTmp, moyenneTmp);
+
+}
+
+//********************************************************************************
+// fonction testEtudiant permet de créer un étudiant et de valider le 
+// fonctionnement de la classe Etudiant.
+//********************************************************************************
+void testEtudiantAdmin(void) {
+  int numeroMatriculeTmp;
+  int moyenneTmp;
+  float coutSession;
+
+  EtudiantAdmin Ben;
+  Ben.setMatricule(5288053);
+  Ben.setMoyenne(69);
+  Ben.setCoutSession1(465.67);
+
+  coutSession = Ben.getCoutSession1();
+  numeroMatriculeTmp = Ben.getMatricule();
+  moyenneTmp = Ben.getMoyenne(); 
+  printf("Ben, matricule # %d, moyenne %d, cout session: %.2f\n", numeroMatriculeTmp, moyenneTmp, coutSession);
 
 }
