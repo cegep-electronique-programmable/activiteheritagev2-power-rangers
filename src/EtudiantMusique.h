@@ -3,16 +3,26 @@
  *      Etudiant.h
  * 
  * Sommaire
- *      Fichier header pour la classe EtudiantMusique.h
+ *      Fichier header pour la classe Etudiant.h
  * 
  * Auteur 
- *      driana Giselle Bardales Lazo
+ *      Maxime Champagne
  */
 
+#ifndef ETUDIANT_MUSIQUE_H
+#define ETUDIANT_MUSIQUE_H
 
-#include "Etudiant.h"
-#ifndef EtudiantMusique_H
-#define EtudiantMusique_H
+//Déclaration de la classe Etudiant
+class Etudiant {
+    int numeroMatricule;
+    int moyenne;
+	
+public:
+    void setMatricule(int);
+    int getMatricule();
+    void setMoyenne(int);
+    int getMoyenne();
+};
 
 class EtudiantMusique : public Etudiant {
 protected:
@@ -25,3 +35,18 @@ public:
 }
 
 #endif //ETUDIANT_H
+
+#ifndef EtudiantMus_H
+#define EtudiantMus_H
+
+//Déclaration de la classe Etudiant
+class EtudiantMusique : Etudiant {
+private:
+    int nbrInstruments;
+public:
+    void setMatricule(int);
+    void setNbrInstrument(int);
+    int getNbrInstruments();
+};
+
+#endif //EtudiantMusique

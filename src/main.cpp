@@ -72,3 +72,4 @@ void testEtudiant(void) {
   printf("Owen, matricule # %d, moyenne %d\n", numeroMatriculeTmp, moyenneTmp);
 
 }
+
