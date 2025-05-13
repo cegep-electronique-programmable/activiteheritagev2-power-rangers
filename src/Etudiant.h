@@ -29,13 +29,12 @@ class Etudiant {
 //Déclaration de la classe EtudiantAdmin
 class EtudiantAdmin : public Etudiant { 
     protected:
-      float coutSession;
+      float coutSession1;
   
     public:
       void setMatricule(int);
-      void setCoutSession(float);
-      float getCoutSession(void);
-      
+      void setCoutSession1(float);
+      float getCoutSession1(void);     
     };
 
 #endif //ETUDIANT_H
