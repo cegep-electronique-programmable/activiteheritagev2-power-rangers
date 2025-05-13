@@ -7,7 +7,9 @@
  * 
  * Auteur 
  *      Maxime Champagne
- *  
+ * 
+ * Modifier par
+ *      Adriana Giselle BradaleS Lazo
  */
 
 #ifndef ETUDIANT_H
@@ -24,5 +26,15 @@ public:
     void setMoyenne(int);
     int getMoyenne();
 };
+
+class EtudiantMusique : public Etudiant {
+protected:
+    int nbrInstruments;
+
+public:
+    void setMatricule(int );
+    void setNbrInstrument(int );
+    int getNbrInstruments();
+}
 
 #endif //ETUDIANT_H
