@@ -7,9 +7,6 @@
  * 
  * Auteur 
  *      Maxime Champagne
- * 
- * Modifier par
- *      Adriana Giselle BradaleS Lazo
  */
 
 #ifndef ETUDIANT_H
