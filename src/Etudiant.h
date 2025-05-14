@@ -41,3 +41,38 @@ public:
 };
 
 #endif //EtudiantMusique
+
+//Déclaration de la classe Etudiant
+class EtudiantTGE:public Etudiant {
+    bool maitriseOscillo;
+  
+public:
+    void setMatricule(int);
+    void setMaitriseOscillo(bool);
+    bool getMaitriseOscillo();
+};
+
+//Déclaration de la classe EtudiantAdmin
+class EtudiantAdmin : public Etudiant { 
+protected:
+  float coutSession1;
+
+public:
+  void setMatricule(int);
+  void setCoutSession1(float);
+  float getCoutSession1(void);     
+};
+
+#ifndef ETUDIANT_ART_LETTRE_H
+#define ETUDIANT_ART_LETTRE_H
+
+class EtudiantArtLettre : public Etudiant {
+private:
+    int nbrLivresLus;
+public:
+    void setMatricule(int);
+    void setNbrLivresLus(int);
+    int getNbrLivresLus();
+};
+
+#endif //ETUDIANT_ART_LETTRE_H
