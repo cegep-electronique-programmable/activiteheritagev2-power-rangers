@@ -21,6 +21,7 @@
 // Déclaration des fonctions
 //********************************************************************************
 void testEtudiant(void);
+void testEtudiantTGE(void);
 void testEtudiantAdmin(void);
 void testEtudiantArtLettre(void);
 
@@ -39,7 +40,8 @@ void setup() {
 
   pinMode(LED_BUILTIN, OUTPUT);   // DEL embarqué configuré en sortie
 
-  testEtudiant();  
+  testEtudiant();
+  testEtudiantTGE();
   testEtudiantAdmin(); 
   testEtudiantArtLettre();
 }
@@ -49,10 +51,8 @@ void setup() {
 // Loop (est appelé en boucle pour l'exécution du programme)
 //********************************************************************************
 void loop() {
-
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));   //Changer état de la DEL
-  delay(1000);    
-                                       //Attendre une seconde
+  delay(1000);    //Attendre une seconde
 }
 
 
@@ -78,6 +78,23 @@ void testEtudiant(void) {
 // fonction testEtudiant permet de créer un étudiant et de valider le 
 // fonctionnement de la classe Etudiant.
 //********************************************************************************
+void testEtudiantTGE(void) {
+  int numeroMatriculeTmp;
+  bool maitriseOscilloTmp;
+  int moyenneTmp;
+
+  EtudiantTGE NSLAY;
+  NSLAY.setMatricule(2288053);
+  NSLAY.setMaitriseOscillo(1);
+  NSLAY.setMoyenne(85);
+
+  numeroMatriculeTmp = NSLAY.getMatricule();
+  moyenneTmp = NSLAY.getMoyenne(); 
+  maitriseOscilloTmp =  NSLAY.getMaitriseOscillo();
+  printf("Owenslay, matricule # %d, moyenne %d, maitrise de l'oscilloscope (1 = oui 0= non)\n", numeroMatriculeTmp, moyenneTmp);
+
+}
+
 void testEtudiantAdmin(void) {
   int numeroMatriculeTmp;
   int moyenneTmp;

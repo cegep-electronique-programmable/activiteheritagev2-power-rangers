@@ -28,6 +28,16 @@ public:
 
 #endif //ETUDIANT_H
 
+//Déclaration de la classe Etudiant
+class EtudiantTGE:public Etudiant {
+    bool maitriseOscillo;
+  
+public:
+    void setMatricule(int);
+    void setMaitriseOscillo(bool);
+    bool getMaitriseOscillo();
+};
+
 //Déclaration de la classe EtudiantAdmin
 class EtudiantAdmin : public Etudiant { 
 protected:
