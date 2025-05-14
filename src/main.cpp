@@ -10,7 +10,9 @@
  * 
  * Date de création
  *      7 mai 2025
- *  
+ * 
+ * Modification faites par
+ *      Adriana Giselle Bardales Lazo
  */
 
 #include <Arduino.h>
@@ -21,12 +23,13 @@
 // Déclaration des fonctions
 //********************************************************************************
 void testEtudiant(void);
+void testEtudiantMusique(void);
 void testEtudiantTGE(void);
 void testEtudiantAdmin(void);
 void testEtudiantArtLettre(void);
 
 //********************************************************************************
-// Déclartions des variables globales
+// Déclarations des variables globales
 //********************************************************************************
 
 
@@ -39,10 +42,11 @@ void setup() {
   printf("Hello world !\n\n");
 
   pinMode(LED_BUILTIN, OUTPUT);   // DEL embarqué configuré en sortie
-
+  
   testEtudiant();
   testEtudiantTGE();
-  testEtudiantAdmin(); 
+  testEtudiantAdmin();
+  testEtuddiantMusique();
   testEtudiantArtLettre();
 }
 
@@ -52,7 +56,7 @@ void setup() {
 //********************************************************************************
 void loop() {
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));   //Changer état de la DEL
-  delay(1000);    //Attendre une seconde
+  delay(1000);                                            //Attendre une seconde
 }
 
 
@@ -72,6 +76,26 @@ void testEtudiant(void) {
   moyenneTmp = owen.getMoyenne(); 
   printf("Owen, matricule # %d, moyenne %d\n", numeroMatriculeTmp, moyenneTmp);
 
+}
+
+//********************************************************************************
+// fonction testMusique permet de créer un étudiant et de valider le 
+// fonctionnement de la classe EtudiantMusique.
+//********************************************************************************
+void testEtudiantMusique(void) {
+  int nbMatricule;
+  int moyenneTmp;
+  int instrumento;
+
+  EtudiantMusique Pedro;
+  Pedro.setMatricule(3456200);
+  Pedro.setNbrInstrument(39);
+  Pedro.setMoyenne(87);
+
+  moyenneTmp = Pedro.getMoyenne(); 
+  instrumento = Pedro.getNbrInstruments();
+  nbMatricule = Pedro.getMatricule();
+  printf("Pedro Pascal, matricule # %d\n, numero d'instruments pretes: %d\n, moyenne %d\n", nbMatricule, instrumento, moyenneTmp);
 }
 
 //********************************************************************************

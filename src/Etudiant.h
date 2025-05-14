@@ -7,7 +7,6 @@
  * 
  * Auteur 
  *      Maxime Champagne
- *  
  */
 
 #ifndef ETUDIANT_H
@@ -27,6 +26,21 @@ public:
 };
 
 #endif //ETUDIANT_H
+
+#ifndef EtudiantMus_H
+#define EtudiantMus_H
+
+//Déclaration de la classe Etudiant
+class EtudiantMusique : public Etudiant {
+    int nbrInstruments;
+
+public:
+    void setMatricule(int);
+    void setNbrInstrument(int);
+    int getNbrInstruments();
+};
+
+#endif //EtudiantMusique
 
 //Déclaration de la classe Etudiant
 class EtudiantTGE:public Etudiant {
