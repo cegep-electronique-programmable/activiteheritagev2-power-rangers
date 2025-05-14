@@ -42,7 +42,7 @@ public:
 #ifndef ETUDIANT_ART_LETTRE_H
 #define ETUDIANT_ART_LETTRE_H
 
-class EtudiantArtLettre : Etudiant {
+class EtudiantArtLettre : public Etudiant {
 private:
     int nbrLivresLus;
 public:

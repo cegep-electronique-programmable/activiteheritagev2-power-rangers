@@ -22,6 +22,7 @@
 //********************************************************************************
 void testEtudiant(void);
 void testEtudiantAdmin(void);
+void testEtudiantArtLettre(void);
 
 //********************************************************************************
 // Déclartions des variables globales
@@ -39,7 +40,8 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);   // DEL embarqué configuré en sortie
 
   testEtudiant();  
-    testEtudiantAdmin(); 
+  testEtudiantAdmin(); 
+  testEtudiantArtLettre();
 }
 
 
@@ -91,4 +93,21 @@ void testEtudiantAdmin(void) {
   moyenneTmp = Ben.getMoyenne(); 
   printf("Ben, matricule # %d, moyenne %d, cout session: %.2f\n", numeroMatriculeTmp, moyenneTmp, coutSession);
 
+}
+
+void testEtudiantArtLettre(void) {
+  int numeroMatriculeTmp;
+  int moyenneTmp;
+  int NbrLivresLus;
+
+  EtudiantArtLettre Mathieu;
+  Mathieu.setMatricule(1234567);
+  Mathieu.setMatricule(4384384);
+  Mathieu.setMoyenne(34);
+  
+  Mathieu.setNbrLivresLus(4);
+  NbrLivresLus = Mathieu.getNbrLivresLus();
+  numeroMatriculeTmp = Mathieu.getMatricule();
+  moyenneTmp = Mathieu.getMoyenne();
+  printf("Mathieu, matricule # %d, moyenne %d, nombre livres lus: %d\n", numeroMatriculeTmp, moyenneTmp, NbrLivresLus);
 }
