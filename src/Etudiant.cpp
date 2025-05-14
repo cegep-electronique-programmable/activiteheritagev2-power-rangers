@@ -68,3 +68,45 @@ void EtudiantTGE::setMaitriseOscillo(bool maitrise){
 bool EtudiantTGE::getMaitriseOscillo(void){
     return (this->maitriseOscillo);
 }
+
+void EtudiantArtLettre::setMatricule(int nouveauMatricule) {
+    if ((nouveauMatricule >= 4000000) && (nouveauMatricule <= 4999999)){
+    this->numeroMatricule = nouveauMatricule;    
+    }
+    else{
+        this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+void EtudiantArtLettre::setNbrLivresLus(int nbrLivresLusTotal) {
+    this->nbrLivresLus = nbrLivresLusTotal;
+}
+
+int EtudiantArtLettre::getNbrLivresLus() {
+    return nbrLivresLus;
+}
+//===========================================================================================================
+//  Fonction Etudiant Admin
+//
+//===========================================================================================================
+
+//Définition de la méthode setMatricule de la classe EtudiantAdmin qui doit commencer par un 5
+void EtudiantAdmin :: setMatricule(int nouveauMatricule){
+    //Le numero de matricule doit necessairement avoir 7 chiffres
+    if ((nouveauMatricule >= 5000000) && (nouveauMatricule <= 5999999)) {
+        this->numeroMatricule = nouveauMatricule;    
+    }
+    else{
+        this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+
+//Définition de la méthode setCoutSession1 de la classe EtudiantAdmin permet de déterminer le cout de la session
+void EtudiantAdmin :: setCoutSession1(float coutSession){
+    coutSession1 = coutSession;
+}
+
+//Définition de la méthode getCoutSession1 de la classe EtudiantAdmin permet de trouver la cout de la session
+float EtudiantAdmin :: getCoutSession1(void){
+    return (this -> coutSession1);
+}
+//===========================================================================================================
