@@ -23,10 +23,11 @@
 // Déclaration des fonctions
 //********************************************************************************
 void testEtudiant(void);
+void testMusique(void);
 
 
 //********************************************************************************
-// Déclartions des variables globales
+// Déclarations des variables globales
 //********************************************************************************
 
 
@@ -50,7 +51,7 @@ void setup() {
 void loop() {
 
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));   //Changer état de la DEL
-
+  testMusique();
   delay(1000);                                            //Attendre une seconde
 }
 
@@ -73,3 +74,20 @@ void testEtudiant(void) {
 
 }
 
+//********************************************************************************
+// fonction testMusique permet de créer un étudiant et de valider le 
+// fonctionnement de la classe EtudiantMusique.
+//********************************************************************************
+void testMusique(void) {
+  int nbMatricule;
+  int moyenneTmp;
+  int instrumento;
+
+  EtudiantMusique Pedro;
+  Pedro.setMatricule(3456200);
+  Pedro.setNbrInstruments(39);
+
+  instrumento = Pedro.getNbrInstruments();
+  nbMatricule = Pedro.getMatricule();
+  printf("Pedro Pascal, matricule # %d\n, numero d'instruments pretes: %d\n", nbMatricule, instrumento);
+}

@@ -24,16 +24,6 @@ public:
     int getMoyenne();
 };
 
-class EtudiantMusique : public Etudiant {
-protected:
-    int nbrInstruments;
-
-public:
-    void setMatricule(int );
-    void setNbrInstrument(int );
-    int getNbrInstruments();
-}
-
 #endif //ETUDIANT_H
 
 #ifndef EtudiantMus_H

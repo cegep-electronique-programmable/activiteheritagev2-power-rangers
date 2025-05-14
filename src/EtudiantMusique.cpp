@@ -44,10 +44,10 @@ int Etudiant::getMoyenne(void){
 
 
 //Méthodes pour la classe EtudiantMusique
-void EtudiantMusique :: setMatricule(int nouveauMatricule){
+void EtudiantMusique :: setMatricule(int NouveauMatricule){
     //Le numero de matricule doit avoir 7 chiffres et commencer par 3
-    if ((nouveauMatricule >= 3000000) && (nouveauMatricule <= 3999999)) {
-        this->numeroMatricule = nouveauMatricule;    
+    if ((NouveauMatricule >= 3000000) && (NouveauMatricule <= 3999999)) {
+        this->numeroMatricule = NouveauMatricule;    
     }
     else{
         this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
