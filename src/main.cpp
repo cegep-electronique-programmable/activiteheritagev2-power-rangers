@@ -85,9 +85,11 @@ void testMusique(void) {
 
   EtudiantMusique Pedro;
   Pedro.setMatricule(3456200);
-  Pedro.setNbrInstruments(39);
+  Pedro.setNbrInstrument(39);
+  Pedro.setMoyenne(87);
 
+  moyenneTmp = Pedro.getMoyenne(); 
   instrumento = Pedro.getNbrInstruments();
   nbMatricule = Pedro.getMatricule();
-  printf("Pedro Pascal, matricule # %d\n, numero d'instruments pretes: %d\n", nbMatricule, instrumento);
+  printf("Pedro Pascal, matricule # %d\n, numero d'instruments pretes: %d\n, moyenne %d\n", nbMatricule, instrumento, moyenneTmp);
 }
