@@ -15,26 +15,40 @@
 
 //Déclaration de la classe Etudiant
 class Etudiant {
-    protected:
-        int numeroMatricule;
-        int moyenne;
-        
-    public:
-        void setMatricule(int);
-        int getMatricule();
-        void setMoyenne(int);
-        int getMoyenne();
-    };
+protected:
+    int numeroMatricule;
+    int moyenne;
+	
+public:
+    void setMatricule(int);
+    int getMatricule();
+    void setMoyenne(int);
+    int getMoyenne();
+};
+
+#endif //ETUDIANT_H
 
 //Déclaration de la classe EtudiantAdmin
 class EtudiantAdmin : public Etudiant { 
-    protected:
-      float coutSession1;
-  
-    public:
-      void setMatricule(int);
-      void setCoutSession1(float);
-      float getCoutSession1(void);     
-    };
+protected:
+  float coutSession1;
 
-#endif //ETUDIANT_H
+public:
+  void setMatricule(int);
+  void setCoutSession1(float);
+  float getCoutSession1(void);     
+};
+
+#ifndef ETUDIANT_ART_LETTRE_H
+#define ETUDIANT_ART_LETTRE_H
+
+class EtudiantArtLettre : Etudiant {
+private:
+    int nbrLivresLus;
+public:
+    void setMatricule(int);
+    void setNbrLivresLus(int);
+    int getNbrLivresLus();
+};
+
+#endif //ETUDIANT_ART_LETTRE_H
