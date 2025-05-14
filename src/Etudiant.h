@@ -15,6 +15,7 @@
 
 //Déclaration de la classe Etudiant
 class Etudiant {
+protected:
     int numeroMatricule;
     int moyenne;
 	
@@ -23,6 +24,17 @@ public:
     int getMatricule();
     void setMoyenne(int);
     int getMoyenne();
+};
+
+//Déclaration de la classe Etudiant
+class EtudiantTGE:public Etudiant {
+    bool maitriseOscillo;
+    
+	
+public:
+    void setMatricule(int);
+    void setMaitriseOscillo(bool);
+    bool getMaitriseOscillo();
 };
 
 #endif //ETUDIANT_H

@@ -10,7 +10,8 @@
  *  
  */
 
-#include "EtudiantTGE.h"
+#include "Etudiant.h"
+
 
 //Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
 void Etudiant::setMatricule(int nouveauMatricule){
@@ -40,4 +41,30 @@ void Etudiant::setMoyenne(int nouvelleMoyenne){
 
 int Etudiant::getMoyenne(void){
     return (this->moyenne);
+}
+
+//Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
+void EtudiantTGE::setMatricule(int nouveauMatricule){
+    //Le numero de matricule doit necessairement avoir 7 chiffres
+    if ((nouveauMatricule >= 2000000) && (nouveauMatricule <= 2999999)){
+        this->numeroMatricule = nouveauMatricule;    
+    }
+    else{
+        this->numeroMatricule = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+
+
+void EtudiantTGE::setMaitriseOscillo(bool maitrise){
+    if ( maitrise <= 1){
+        this-> maitriseOscillo = maitrise;
+    }
+    else{
+     //   printf("La valeur n'est pas valide");
+        this->maitriseOscillo = 0; //Le matricule est mis à 0 si le matricule n'est pas valide
+    }
+}
+
+bool EtudiantTGE::getMaitriseOscillo(void){
+    return (this->maitriseOscillo);
 }

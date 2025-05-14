@@ -15,7 +15,7 @@
 
 #include <Arduino.h>
 #include <iostream>
-#include "EtudiantTGE.h"
+#include "Etudiant.h"
 
 //********************************************************************************
 // Déclaration des fonctions
@@ -70,3 +70,74 @@ void testEtudiant(void) {
   printf("Owen, matricule # %d, moyenne %d\n", numeroMatriculeTmp, moyenneTmp);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************************************************************
+// fonction testEtudiant permet de créer un étudiant et de valider le 
+// fonctionnement de la classe Etudiant.
+//********************************************************************************
+void EtudiantTGE(void) {
+  int numeroMatriculeTmp;
+  bool maitriseOscilloTmp;
+  int moyenneTmp;
+
+  EtudiantTGE NSLAY;
+  NSLAY.setMatricule(2288053);
+  NSLAY.setMaitriseOscillo(1);
+  NSLAY.setMoyenne(85);
+
+  numeroMatriculeTmp = owen.getMatricule();
+  moyenneTmp = owen.getMoyenne(); 
+  maitriseOscilloTmp =  NSLAY.getMaitriseOscillo();
+  printf("Owenslay, matricule # %d, moyenne %d, maitrise de l'oscilloscope (1 = oui 0= non)\n", numeroMatriculeTmp, moyenneTmp);
+
+}
+
+
+
+
+
+
+
+
