@@ -10,7 +10,7 @@
  *  
  */
 
-#include "EtudiantMusique.h"
+#include "Etudiant.h"
 
 //Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
 void Etudiant::setMatricule(int nouveauMatricule){
@@ -55,12 +55,12 @@ void EtudiantMusique :: setMatricule(int NouveauMatricule){
 }
 
 //Méthode setNbrInstrument pour obtenir nombre d'instruments
-void EtudiantMusique :: setNbrInstrument(int nbInstruments){
-    this-> NbrInstrument = nbInstruments;
+void EtudiantMusique :: setNbrInstrument(int nb_Instruments){
+    this-> nbrInstruments = nb_Instruments;
 }
 
 //Méthode getNbrInstrument pour obtenir nombre d'instruments
-int EtudiantMusique :: getNbrInstrument(){
-    return (this-> NbrInstrument);
+int EtudiantMusique :: getNbrInstruments(){
+    return (this-> nbrInstruments);
 }
 

@@ -9,11 +9,12 @@
  *      Maxime Champagne
  */
 
-#ifndef ETUDIANT_MUSIQUE_H
-#define ETUDIANT_MUSIQUE_H
+#ifndef ETUDIANT_H
+#define ETUDIANT_H
 
 //Déclaration de la classe Etudiant
 class Etudiant {
+protected:
     int numeroMatricule;
     int moyenne;
 	
@@ -30,9 +31,9 @@ public:
 #define EtudiantMus_H
 
 //Déclaration de la classe Etudiant
-class EtudiantMusique : Etudiant {
-private:
+class EtudiantMusique : public Etudiant {
     int nbrInstruments;
+
 public:
     void setMatricule(int);
     void setNbrInstrument(int);
