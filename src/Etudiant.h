@@ -28,6 +28,17 @@ public:
 
 #endif //ETUDIANT_H
 
+//Déclaration de la classe EtudiantAdmin
+class EtudiantAdmin : public Etudiant { 
+protected:
+  float coutSession1;
+
+public:
+  void setMatricule(int);
+  void setCoutSession1(float);
+  float getCoutSession1(void);     
+};
+
 #ifndef ETUDIANT_ART_LETTRE_H
 #define ETUDIANT_ART_LETTRE_H
 
