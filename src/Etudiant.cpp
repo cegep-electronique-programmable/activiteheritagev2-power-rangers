@@ -12,6 +12,11 @@
 
 #include "Etudiant.h"
 
+//===========================================================================================================
+//  Fonction Etudiant
+//
+//===========================================================================================================
+
 //Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
 void Etudiant::setMatricule(int nouveauMatricule){
     //Le numero de matricule doit necessairement avoir 7 chiffres
@@ -40,12 +45,17 @@ int Etudiant::getMoyenne(void){
     return (this->moyenne);
 }
 
+//===========================================================================================================
+//  Fonction Etudiant Musique
+//
+//===========================================================================================================
 
 //Méthodes pour la classe EtudiantMusique
 void EtudiantMusique :: setMatricule(int NouveauMatricule){
     //Le numero de matricule doit avoir 7 chiffres et commencer par 3
     if ((NouveauMatricule >= 3000000) && (NouveauMatricule <= 3999999)) {
-        this->numeroMatricule = NouveauMatricule;  
+        this->numeroMatricule = NouveauMatricule;
+    }
 }
 
 //Méthode setNbrInstrument pour obtenir nombre d'instruments
@@ -58,6 +68,11 @@ int EtudiantMusique :: getNbrInstruments(){
     return (this-> nbrInstruments);
 }
 
+
+//===========================================================================================================
+//  Fonction Etudiant TGE
+//
+//===========================================================================================================
 
 //Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
 void EtudiantTGE::setMatricule(int nouveauMatricule){
@@ -84,8 +99,14 @@ bool EtudiantTGE::getMaitriseOscillo(void){
     return (this->maitriseOscillo);
 }
 
+//===========================================================================================================
+//  Fonction Etudiant Art et Lettre
+//
+//===========================================================================================================
 
+//Définition de la méthode setMatricule de la classe, permet de modifier le matricule de l'étudiant
 void EtudiantArtLettre::setMatricule(int nouveauMatricule) {
+    //Le numero de matricule doit necessairement avoir 7 chiffres
     if ((nouveauMatricule >= 4000000) && (nouveauMatricule <= 4999999)){
     this->numeroMatricule = nouveauMatricule;
     }
@@ -94,10 +115,12 @@ void EtudiantArtLettre::setMatricule(int nouveauMatricule) {
     }
 }
 
+//Définition de la méthode setNbrLivresLus de la classe, permet de modifier le nombre de livres lus de l'étudiant
 void EtudiantArtLettre::setNbrLivresLus(int nbrLivresLusTotal) {
     this->nbrLivresLus = nbrLivresLusTotal;
 }
 
+//Définition de la méthode getNbrLivresLus de la classe, permet de savoir le nombre de livres lus de l'étudiant
 int EtudiantArtLettre::getNbrLivresLus() {
     return (this->nbrLivresLus);
 }
