@@ -41,7 +41,7 @@ int Etudiant::getMoyenne(void){
 }
 
 void EtudiantArtLettre::setMatricule(int nouveauMatricule) {
-    if ((nouveauMatricule >= 4000000) && (nouveauMatricule <= 9999999)){
+    if ((nouveauMatricule >= 4000000) && (nouveauMatricule <= 4999999)){
         this->numeroMatricule = nouveauMatricule;    
     }
     else{
